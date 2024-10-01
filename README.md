@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+                                    Counter Value Application
+
+## Overview
+This is a NextJs Application that allows usera to increment and decrement values while storing the history of the values.It has a debounced functionality that allows users to search through a list and its only triggered after a duration of seconds. To add on it has the lazy loading functionality to improve performance.
+
+## Prerequisites
+- Node.js
+- npm
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <https://github.com/BitByteSavvy/Counter-App.git>
+
 
 ## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
+Navigate to your project directory
+run npm install : #To load the necessary dependencies
+npm run dev : #run the development server:
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Testing
+Writing test cases is a crucial part to ensure your application works as expected.This application uses the Jest Framework
+* npm install --save-dev jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom #installs the necessary libraries for testing.
+Next, create a jest.config.js file in the root of your project to configure Jest
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## On Testing
+You may encounter an error regarding the JSX syntax, so resolve this by create a .babelrc file in your root directory and add this code 
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+once done rerun the npm test
 
-## Learn More
+Ensure you clear cache before testing by running npm cache clean --force
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
